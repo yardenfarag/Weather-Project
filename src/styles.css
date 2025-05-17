@@ -1,1 +1,132 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Soft, modern color palette */
+  --primary-color: #7C4DFF;
+  --primary-light: #B39DDB;
+  --primary-dark: #4527A0;
+  --secondary-color: #26A69A;
+  --secondary-light: #80CBC4;
+  --secondary-dark: #00897B;
+  
+  /* Light theme */
+  --background-color: #F8F9FA;
+  --surface-color: #FFFFFF;
+  --error-color: #EF5350;
+  --on-primary: #FFFFFF;
+  --on-secondary: #FFFFFF;
+  --on-background: #2C3E50;
+  --on-surface: #2C3E50;
+  --on-error: #FFFFFF;
+  --text-primary: var(--on-background);
+  --text-secondary: #546E7A;
+  --surface-hover: rgba(0, 0, 0, 0.04);
+  --border-color: #E0E0E0;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --header-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] {
+  /* Dark theme */
+  --primary-color: #9575CD;
+  --primary-light: #D1C4E9;
+  --primary-dark: #5E35B1;
+  --secondary-color: #4DB6AC;
+  --secondary-light: #B2DFDB;
+  --secondary-dark: #00796B;
+  --background-color: #121212;
+  --surface-color: #1E1E1E;
+  --error-color: #EF5350;
+  --on-primary: #FFFFFF;
+  --on-secondary: #FFFFFF;
+  --on-background: #FFFFFF;
+  --on-surface: #FFFFFF;
+  --on-error: #FFFFFF;
+  --text-primary: var(--on-background);
+  --text-secondary: #B0BEC5;
+  --surface-hover: rgba(255, 255, 255, 0.05);
+  --border-color: #424242;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --header-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+/* Material Design Components Customization */
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-outlined-button,
+.mat-mdc-icon-button {
+  --mdc-filled-button-container-color: var(--primary-color);
+  --mdc-filled-button-label-text-color: var(--on-primary);
+  --mdc-outlined-button-outline-color: var(--primary-color);
+  --mdc-outlined-button-label-text-color: var(--primary-color);
+  --mdc-icon-button-icon-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.mat-mdc-slider {
+  --mdc-slider-handle-color: var(--primary-color);
+  --mdc-slider-focus-handle-color: var(--primary-color);
+  --mdc-slider-with-tick-marks-active-container-color: var(--primary-color);
+  --mat-slider-ripple-color: var(--primary-color);
+  --mat-slider-hover-ripple-color: var(--primary-color);
+  --mat-slider-focus-ripple-color: var(--primary-color);
+}
+
+.mat-mdc-toolbar {
+  --mdc-elevated-card-container-color: var(--surface-color);
+  color: var(--on-surface);
+}
+
+.mat-mdc-list-item {
+  --mdc-list-list-item-label-text-color: var(--on-surface);
+  --mdc-list-list-item-supporting-text-color: var(--on-surface);
+  --mdc-list-list-item-hover-label-text-color: var(--on-surface);
+  --mdc-list-list-item-hover-supporting-text-color: var(--on-surface);
+  --mdc-list-list-item-selected-label-text-color: var(--on-surface);
+  --mdc-list-list-item-selected-supporting-text-color: var(--on-surface);
+}
+
+.mat-icon {
+  color: var(--text-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
